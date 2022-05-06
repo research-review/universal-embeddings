@@ -1,0 +1,20 @@
+# How to create a research review repository
+
+## Clone
+
+- `git clone https://research-review:<TOKEN>@github.com/research-review/universal-embeddings.git universal-embeddings-review`
+- Tokens: https://github.com/settings/tokens
+
+## Check strings
+
+- `grep --color -rnwi -E "STRING1|STRING2" './'`
+- `grep -rli 'old_word' * | xargs -i@ sed -i 's/old_word/new_word/g' @` (replace strings in all files, [source](https://stackoverflow.com/a/20721292))
+
+## Config and Commit
+
+- Get your email at https://github.com/settings/emails
+
+```bash
+git config user.email "12345678+research-review@users.noreply.github.com"
+git add * ; git commit -m "review" ; git push
+```
